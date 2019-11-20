@@ -12,12 +12,27 @@ code {
     monospace;
 }
 
+.home-no-search {
+  background: rgb(211, 231,	224);
+  height: 70vh
+}
+
+.home-no-search img {
+  height: 300px;
+  width: 300px;
+  padding-top: 80px;
+}
+
+.home-no-search h3 {
+  padding-top: 80px
+}
+
 .florists-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  background: rgb(211, 231,	224)	;
+  background: rgb(211, 231,	224);
   /* padding: 0 40px 0 40px */
 }
 
@@ -33,7 +48,11 @@ code {
   margin: 10px
 }
 
-/* .img-fluid img {
-  height: 100px;
-  width: 100px
-} */
+.florist-detail {
+  background: rgb(211, 231,	224);
+}
+
+.florist-detail img {
+  height: 500px;
+  width: 500px
+}

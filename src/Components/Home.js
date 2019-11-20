@@ -52,9 +52,19 @@ export default class Home extends React.Component {
                     <Button type="submit">Locate Florists</Button>
                 </Form>
                 <br />
+                    {!this.state.searched ? 
+                        <div className="home-no-search">
+                            <img src={require('../Images/funeral-flower.jpeg')} />
+                        </div> 
+                            : 
+                        null
+                    }
+                
                     {this.state.searched && this.state.searchResults.length === 0
                     ?
-                    <p>No results Found</p>
+                    <div className="home-no-search">
+                    <h3>Sorry, No results Found</h3>
+                    </div>
                     :
                     <FloristsContainer searchResults={ this.state.searchResults } history={this.props.history} />
                     } 

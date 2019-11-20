@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
+import {  MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCol } from 'mdbreact';
 
 export default class FloristsContainer extends React.Component {
     
@@ -13,14 +13,13 @@ export default class FloristsContainer extends React.Component {
         let allFloristsCards = this.props.searchResults.map((florist) => {
             return(
                 <MDBCol >
-                    <MDBCard style={{ width: "22rem", background:"white", border:"solid" }} onClick={() => this.handleClick(florist)}>
+                    <MDBCard style={{ width: "22rem", background:"white", border:"solid" }} onClick={ () => this.handleClick(florist)}>
                         <MDBCardImage className="img-fluid" src={florist.image_url ? florist.image_url : null} style={{ width: "22rem" }} waves />
                         <MDBCardBody>
                             <MDBCardTitle>{florist.name}</MDBCardTitle>
                         </MDBCardBody>
                     </MDBCard>
                 </MDBCol>
-                
             )
         })
 
