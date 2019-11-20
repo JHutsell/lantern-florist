@@ -1,12 +1,14 @@
 import React from 'react';
-import Routes from './routes/routes';
+import Routes from '../Routes/routes';
+import FloristsContainer from './FloristsContainer';
 import {Form, FormControl, Button} from 'react-bootstrap';
 
 
 export default class Home extends React.Component {
     state = {
         searchLocation: '',
-        searchResults: []
+        searchResults: [],
+        searched: false
     }
 
     handleSearchInput = (e) => {
@@ -27,7 +29,13 @@ export default class Home extends React.Component {
         }).then(resp => resp.json())
         .then(data => {
             this.setState({
-                searchResults : data.businesses
+                searched: true,
+                searchResults: []
+            })
+
+            if(data.businesses) 
+            this.setState({
+                searchResults : data.businesses,
             })
         })
         
@@ -35,22 +43,25 @@ export default class Home extends React.Component {
 
     render() {
 
-        let allFloristsList = this.state.searchResults.map((business) => {
-            return <li>{business.name}</li>})
+        console.log(this.state.searchResults)
+        // let allFloristsList = this.state.searchResults.map((business) => {
+        //     return <li>{business.name}</li>})
 
         return(
             <div>
+                <h1>Let us Help you find your Floral Arrangement</h1>
                 <Form onSubmit={this.handleSearchSubmit} inline>
                     <br />
                     <FormControl type="text" onChange={ this.handleSearchInput } value={ this.state.searchLocation }  placeholder="Search" className="mr-sm-2" />
                     <Button type="submit">Locate Florists</Button>
                 </Form>
+                <br />
                 
-                    {this.state.searchResults.length === 0
+                    {this.state.searched && this.state.searchResults.length === 0
                     ?
-                    null
+                    <p>No results Found</p>
                     :
-                    <ul>{allFloristsList}</ul>
+                    <FloristsContainer searchResults={ this.state.searchResults } />
                     } 
 
             </div>
