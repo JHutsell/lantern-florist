@@ -7,11 +7,12 @@ import './App.css';
 function App() {
   require('dotenv').config()
   return (
-    <Switch>
-      <div className="App">
-        <Home />
-      </div>
-    </Switch>
+    <div className="App">
+      <Switch>
+        <Route exact path='/' render={(routerProps)=> <Home  {...routerProps}/>} />
+        <Route path='/floristDetail' render={(routerProps)=> <FloristDetail {...routerProps} />} />
+      </Switch>
+    </div>
   );
 }
 

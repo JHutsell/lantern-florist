@@ -43,10 +43,6 @@ export default class Home extends React.Component {
 
     render() {
 
-        console.log(this.state.searchResults)
-        // let allFloristsList = this.state.searchResults.map((business) => {
-        //     return <li>{business.name}</li>})
-
         return(
             <div>
                 <h1>Let us Help you find your Floral Arrangement</h1>
@@ -56,14 +52,12 @@ export default class Home extends React.Component {
                     <Button type="submit">Locate Florists</Button>
                 </Form>
                 <br />
-                
                     {this.state.searched && this.state.searchResults.length === 0
                     ?
                     <p>No results Found</p>
                     :
-                    <FloristsContainer searchResults={ this.state.searchResults } />
+                    <FloristsContainer searchResults={ this.state.searchResults } history={this.props.history} />
                     } 
-
             </div>
             
         )
