@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/lantern-florist/static/css/main.0c85ce23.chunk.css",
+    "main.js": "/lantern-florist/static/js/main.bd5cef7b.chunk.js",
+    "main.js.map": "/lantern-florist/static/js/main.bd5cef7b.chunk.js.map",
+    "runtime-main.js": "/lantern-florist/static/js/runtime-main.8403e5aa.js",
+    "runtime-main.js.map": "/lantern-florist/static/js/runtime-main.8403e5aa.js.map",
+    "static/js/2.4dc660d7.chunk.js": "/lantern-florist/static/js/2.4dc660d7.chunk.js",
+    "static/js/2.4dc660d7.chunk.js.map": "/lantern-florist/static/js/2.4dc660d7.chunk.js.map",
+    "index.html": "/lantern-florist/index.html",
+    "precache-manifest.c70c15bf1125dfc35a532cc4c19355f3.js": "/lantern-florist/precache-manifest.c70c15bf1125dfc35a532cc4c19355f3.js",
+    "service-worker.js": "/lantern-florist/service-worker.js",
+    "static/css/main.0c85ce23.chunk.css.map": "/lantern-florist/static/css/main.0c85ce23.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8403e5aa.js",
+    "static/js/2.4dc660d7.chunk.js",
+    "static/css/main.0c85ce23.chunk.css",
+    "static/js/main.bd5cef7b.chunk.js"
+  ]
+}
